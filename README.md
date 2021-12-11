@@ -186,9 +186,7 @@ PS：图中的飞线是为了验证其他项目飞的电源线，不影响本项
 
 [4] Sandler M. et al. “Inverted residuals and linear bottlenecks:Mobile networks for classification, detection and segmentation” arXiv preprint arXiv:1801.04381, 2018.
 
-[5] https://arxiv.org/abs/1808.09945
-
-[6] https://ieeexplore.ieee.org/document/8656778
+[5] Roman Solovyev, Fixed-Point Convolutional Neural Network for Real-Time Video Processing in FPGA, 2019
 
 # 致谢
 
