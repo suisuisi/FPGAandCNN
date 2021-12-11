@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Dec 12 01:57:36 2021
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : cam_proj
+Top-level Entity Name : cam_proj_top
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 5,967 / 22,320 ( 27 % )
+    Total combinational functions : 5,544 / 22,320 ( 25 % )
+    Dedicated logic registers : 2,348 / 22,320 ( 11 % )
+Total registers : 2348
+Total pins : 87 / 154 ( 56 % )
+Total virtual pins : 0
+Total memory bits : 367,279 / 608,256 ( 60 % )
+Embedded Multiplier 9-bit elements : 25 / 132 ( 19 % )
+Total PLLs : 2 / 4 ( 50 % )

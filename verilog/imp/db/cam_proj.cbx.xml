@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="cam_proj">
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|RAM:memory|altsyncram:mem_t_rtl_0" CBX_FILE_NAME="altsyncram_e2e1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_afh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult0" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_0dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|cam_wrp:cam_wrp_0|fifo_1024x16:input_fifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_p0o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|camera_configure:camera_configure_0|OV7670_config_rom:rom1|altsyncram:WideOr0_rtl_0" CBX_FILE_NAME="altsyncram_e801.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|pll_for_disp:pll2|altpll:altpll_component" CBX_FILE_NAME="pll_for_disp_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_afh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult1" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_0dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult2" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv_TOP:conv|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_0dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv_TOP:conv|lpm_mult:Mult1" CBX_FILE_NAME="mult_gbt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_nbh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|lpm_mult:Mult5" CBX_FILE_NAME="mult_gbt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|hellosoc_top:TFT|fifo_big:fifo_tft|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_kul1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult3" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult4" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv_TOP:conv|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_2dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|database:database|altsyncram:storage_rtl_0" CBX_FILE_NAME="altsyncram_70j1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_0dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|lpm_mult:Mult7" CBX_FILE_NAME="mult_u9t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|pll:pll_for_sdram_0|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|RAM:memory|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_m2e1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult5" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|RAM:memory|altsyncram:weight_rtl_0" CBX_FILE_NAME="altsyncram_otd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult6" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_mbh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult7" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_kbh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|maxp:maxpooling|lpm_mult:Mult0" CBX_FILE_NAME="mult_ebt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|conv:conv1|lpm_mult:Mult8" CBX_FILE_NAME="mult_p5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|maxp:maxpooling|lpm_mult:Mult1" CBX_FILE_NAME="mult_ibt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cam_proj_top|TOP:neiroset|border:border|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
