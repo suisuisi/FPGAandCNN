@@ -145,26 +145,35 @@ CNN的本质：输入大小从一层到另一层减小，而过滤器的数量�
 * [SPI TFT](https://cdn-shop.adafruit.com/datasheets/ILI9341.pdf)
 * ![Display ILI9341](https://github.com/suisuisi/FPGAandCNN/blob/main/images/spitft.jpg?raw=true  "SPI TFT")
 * [PMOD](https://github.com/suisuisi/FPGAandCNN/tree/main/hardware/PMOD_OV7670)
-* ![PMOD](https://github.com/suisuisi/FPGAandCNN/blob/main/images/spitft.jpg?raw=true  "PMOD")
+* ![PMOD](https://github.com/suisuisi/FPGAandCNN/blob/main/images/PMOD.png?raw=true  "PMOD")
+
+硬件连接如下：
+
+![TOP](https://github.com/suisuisi/FPGAandCNN/blob/main/images/Conn-Foto-top.jpg?raw=true  "TOP")
+
+![BOTTOM](https://github.com/suisuisi/FPGAandCNN/blob/main/images/Conn-Foto-bot.jpg?raw=true  "BOTTOM")
+
+PS：图中的飞线是为了验证其他项目飞的电源线，不影响本项目使用
+
 
 整个硬件数据流：摄像头将图像以低频率写入FIFO，然后SDRAM控制器以高频率读取数据。然后FPGA将SDRAM中的数据写入屏幕FIFO。
 
 来自摄像头的图片经过SDRAM后，按原样显示在屏幕上，并将图像转换为灰度并降低分辨率的图像输入到神经网络进行识别。当神经网络操作完成后，结果也直接输出到屏幕上。
 
-逻辑使用率如下所示：
+# 注意
 
+可以将r05_verilog_generator_neural_net_structure.py 中的常量num_conv = 2更改为 1、2 或 4 个并行工作的卷积块。更多的卷积块将使用更多的 FPGA逻辑资源，但是会提高整体运行速度。
 
-![](https://files.mdnice.com/user/17442/bf6defde-a555-4e8c-a573-118de3210207.png)
+下面是不同位权重和卷积块数量的比较表（红色行：由于FPGA 限制，无法合成）。
 
-PS：可以通过修改使用的卷积块提高运行速率，但是会占用更多的逻辑。
+![使用的FPGA资源](https://github.com/suisuisi/FPGAandCNN/blob/main/images/Info-Table.png?raw=true "使用的FPGA资源")
 
 
 
 # 视频演示
 
-# 开源代码
+[![使用FPGA实现数字识别-基于定点神经网络（CNN）](https://github.com/suisuisi/FPGAandCNN/blob/main/images/Video-screen.png)](https://www.bilibili.com/video/BV1yY411p7Ju)
 
-代码会开源，不过现在还有一些问题，完善后会第一时间开源出来，请持续关注本公众号（OpenFPGA），谢谢大家支持。
 
 
 # 参考文献
@@ -177,69 +186,10 @@ PS：可以通过修改使用的卷积块提高运行速率，但是会占用更
 
 [4] Sandler M. et al. “Inverted residuals and linear bottlenecks:Mobile networks for classification, detection and segmentation” arXiv preprint arXiv:1801.04381, 2018.
 
+[5] https://arxiv.org/abs/1808.09945
+
+[6] https://ieeexplore.ieee.org/document/8656778
+
 # 致谢
 
 本人刚接触这方面的知识，很感谢在设计过程中帮忙的朋友，让我在磕磕碰碰中完成了该项目，非常感谢！
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Device
-To recreate the device you need 3 components:
-* [De0Nano board](http://www.ti.com/lit/ug/tidu737/tidu737.pdf) (~80$)
-* [Camera OV7670](https://www.voti.nl/docs/OV7670.pdf) (~7$)
-* [Display ILI9341](https://cdn-shop.adafruit.com/datasheets/ILI9341.pdf) (~7$)
-
-### Connection of components
-
-![Connection scheme](https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA/blob/master/images/Connection-scheme.png "Connection scheme")
-* You need to connect pins with same name
-* 'x' pins are not used
-* You can see our connection variant on photo below
-* Detailed guide [how to use project in Altera Quartus](https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA/blob/master/README_QUARTUS.md).
-
-![De0-Nano connection](https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA/blob/master/images/Connect-Detailed.jpg "De0-Nano connection")
-
-![Connection photo](https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA/blob/master/images/Connection-photo.jpg "Connection photo")
-
-## Demo video with detection
-
-[![Convolutional Neural Net implementation in FPGA (Demo)](https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA/blob/master/images/Video-screen.jpg)](https://www.youtube.com/watch?v=Lhnf596o0cc)
-
-## Notes
-
-* You can change constant _num_conv = 2_ in r05_verilog_generator_neural_net_structure.py to 1, 2 or 4 convolutional 
-blocks which will work in parallel. More blocks will require more LE in FPGA, but increase the overall speed.
-
-* Comparison table for different bit weights and number of convolution blocks below (red rows: unable to synthesize, due to Cyclone IV limitations).
-
-![Used FPGA resources](https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA/blob/master/images/Info-Table.png "Used FPGA resources")
-
-## Related project
-
-The similar project but with more complicated and widely used neural net: MobileNet (v1). It uses some other set of devices. It has similar code structure. It has fast speed (>40 FPS) and much better accuracy comparing to this project. It suitable for most image classification tasks in real time.
-
-* [MobileNet in FPGA](https://github.com/ZFTurbo/MobileNet-in-FPGA)
-
-## Citation
-
-You can find detailed description of the method in our [paper](https://doi.org/10.1109/EIConRus.2019.8656778) (or [unpaywalled preprint](https://arxiv.org/abs/1808.09945)). If you find this work useful, please consider citing:
-
-      @inproceedings{solovyev2019fixed,
-        title={Fixed-point convolutional neural network for real-time video processing in FPGA},
-        author={Solovyev, Roman and Kustov, Alexander and Telpukhov, Dmitry and Rukhlov, Vladimir and Kalinin, Alexandr},
-        booktitle={2019 IEEE Conference of Russian Young Researchers in Electrical and Electronic Engineering (EIConRus)},
-        pages={1605--1611},
-        year={2019},
-        organization={IEEE}
-      }
-
